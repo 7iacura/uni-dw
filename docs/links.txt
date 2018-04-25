@@ -1,0 +1,20 @@
+SORGENTI DATI
+
+1. Incidenti stradali
+
+NYPD
+https://data.cityofnewyork.us/Public-Safety/NYPD-Motor-Vehicle-Collisions/h9gi-nx95
+
+NYC GOV
+http://www.nyc.gov/html/dot/html/about/vz_datafeeds.shtml
+http://www.nyc.gov/html/dot/downloads/misc/speed_limit_bronx.json
+
+VISIONZERO
+http://www.vzv.nyc/
+
+2. Condizioni meteo 
+WUNDERGROUND
+https://www.wunderground.com/history/airport/KNYC/2018/4/12/DailyHistory.html?req_city=New+York&req_state=NY&req_statename=New+York&reqdb.zip=10001&reqdb.magic=8&reqdb.wmo=99999
+
+DARKSKY
+https://api.darksky.net/forecast/72a133efd53a82f8b026b3730c921135/40,-74,2018-04-12T00:00:00
