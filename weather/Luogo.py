@@ -5,7 +5,7 @@ class Luogo:
         self.zip = zip
         self.latitude = latitude
         self.longitude = longitude
-        if zip == "":
+        if zip.strip() == "":
             self.zip = 0
         if latitude == "":
             self.latitude = 0
@@ -35,9 +35,11 @@ class Luogo:
             exist = True
 
         if not exist:
-            add_scatenante = "INSERT INTO luogo (quartiere,zip,latitudine,longitudine)VALUES ('"+str(self.borough)+"',"+str(self.zip)+","+str(self.latitude)+","+str(self.longitude)+")"
+            add_scatenante = "INSERT INTO luogo (quartiere,zip,latitudine,longitudine)VALUES (%s,%s,%s,%s)"
+            data_scatenante = (self.borough,self.zip,self.latitude,self.longitude)
+            cursor.execute(add_scatenante,data_scatenante)
             id = cursor.lastrowid
-            cursor.execute(add_scatenante)
+
         else:
             if self.borough != "" and self.borough != quartiere:
                 update = "UPDATE luogo set quartiere = '"+self.borough+"' where id = "+str(id)

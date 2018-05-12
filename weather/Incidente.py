@@ -7,6 +7,7 @@ class Incidente:
         time = row[1].split(':')
         if int(time[1]) >= 30:
             time[0] = str(int(time[0]) + 1)
+        time[1] = '00'
         if time[0] == '24':
             time[0] = '00'
         self.date = datetime.date(int(date[2]),int(date[0]),int(date[1]))
