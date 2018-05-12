@@ -9,6 +9,7 @@ from Luogo import Luogo
 from Strada import Strada
 from pprint import pprint
 
+passwordSQL = 'passMysql'
 
 def linkLuogoStrada(cursor, idLuogo, idStrada):
     if idLuogo != 0 and idStrada != 0:
@@ -24,9 +25,9 @@ def link(cursor,idIncidente,idVeicolo,idScatenante):
 with open('NYPD_Motor_Vehicle_Collisions.csv', 'r') as csvfile:
     reader = csv.reader(csvfile, delimiter=',')
     header = True
-    cnx = mysql.connector.connect(user='root', password='',
+    cnx = mysql.connector.connect(user='root', password=passwordSQL,
                                   host='localhost',
-                                  database='datawarehouse')
+                                  database='stepone')
     cursor = cnx.cursor()
     i = 0
     for row in reader:
