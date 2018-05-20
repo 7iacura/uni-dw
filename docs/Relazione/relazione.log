@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.27)  12 MAY 2018 15:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.27)  20 MAY 2018 14:43
 entering extended mode
 **./relazione.tex
 (relazione.tex
@@ -38,17 +38,17 @@ Package tocbasic Info: omitting babel extension for `lof'
 Package tocbasic Info: omitting babel extension for `lot'
 (tocbasic)             because of feature `nobabel' available
 (tocbasic)             for `lot' on input line 134.
-Package scrartcl Info: You've used standard option `11pt'.
+Package scrartcl Info: You've used standard option `12pt'.
 (scrartcl)             This is correct!
-(scrartcl)             Internally I'm using `fontsize=11pt'.
+(scrartcl)             Internally I'm using `fontsize=12pt'.
 (scrartcl)             If you'd like to set the option with \KOMAoptions,
-(scrartcl)             you'd have to use `fontsize=11pt' there
-(scrartcl)             instead of `11pt', too.
-Class scrartcl Info: File `scrsize11pt.clo' used to setup font sizes on input l
+(scrartcl)             you'd have to use `fontsize=12pt' there
+(scrartcl)             instead of `12pt', too.
+Class scrartcl Info: File `scrsize12pt.clo' used to setup font sizes on input l
 ine 2059.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrsize11pt.clo"
-File: scrsize11pt.clo 2017/04/13 v3.23 KOMA-Script font size class option (11pt
+("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrsize12pt.clo"
+File: scrsize12pt.clo 2017/04/13 v3.23 KOMA-Script font size class option (12pt
 )
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\typearea.sty"
@@ -66,21 +66,21 @@ Package typearea Info: You've used standard option `a4paper'.
 \ta@temp=\skip45
 \footheight=\skip46
 Package typearea Info: These are the values describing the layout:
-(typearea)             DIV  = 10
+(typearea)             DIV  = 12
 (typearea)             BCOR = 0.0pt
 (typearea)             \paperwidth      = 597.50793pt
-(typearea)              \textwidth      = 418.25555pt
+(typearea)              \textwidth      = 448.13095pt
 (typearea)              DIV departure   = -6%
-(typearea)              \evensidemargin = 17.3562pt
-(typearea)              \oddsidemargin  = 17.3562pt
+(typearea)              \evensidemargin = 2.4185pt
+(typearea)              \oddsidemargin  = 2.4185pt
 (typearea)             \paperheight     = 845.04694pt
-(typearea)              \textheight     = 595.80026pt
-(typearea)              \topmargin      = -25.16531pt
-(typearea)              \headheight     = 17.0pt
-(typearea)              \headsep        = 20.40001pt
-(typearea)              \topskip        = 11.0pt
-(typearea)              \footskip       = 47.6pt
-(typearea)              \baselineskip   = 13.6pt
+(typearea)              \textheight     = 635.5pt
+(typearea)              \topmargin      = -41.72441pt
+(typearea)              \headheight     = 18.125pt
+(typearea)              \headsep        = 21.75pt
+(typearea)              \topskip        = 12.0pt
+(typearea)              \footskip       = 50.75pt
+(typearea)              \baselineskip   = 14.5pt
 (typearea)              on input line 1647.
 )
 \c@part=\count80
@@ -1001,33 +1001,92 @@ LaTeX Info: Redefining \nameref on input line 22.
 \@outlinefile=\write4
 \openout4 = `relazione.out'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 37.
  [1
 
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 37.
+Underfull \hbox (badness 10000) in paragraph at lines 45--79
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--79
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--79
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--79
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--79
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--79
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--79
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--79
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--79
+
+ []
+
+[2] <ER.png, id=27, 763.85374pt x 598.235pt>
+File: ER.png Graphic file (type png)
+ <use ER.png>
+Package pdftex.def Info: ER.png used on input line 81.
+(pdftex.def)             Requested size: 458.31578pt x 358.94377pt.
+
+Overfull \hbox (10.18483pt too wide) in paragraph at lines 81--82
+ [] 
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 96.
+[3 <./ER.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 96.
  (relazione.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 37.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 37.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 96.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 96.
 Package rerunfilecheck Info: File `relazione.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 11590 strings out of 493323
- 175347 string characters out of 3139063
- 346722 words of memory out of 3000000
- 14998 multiletter control sequences out of 15000+200000
- 11983 words of font info for 41 fonts, out of 3000000 for 9000
+ 11639 strings out of 493323
+ 175914 string characters out of 3139063
+ 349723 words of memory out of 3000000
+ 15025 multiletter control sequences out of 15000+200000
+ 18029 words of font info for 60 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,7n,51p,8822b,334s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on relazione.pdf (1 page, 51359 bytes).
+ 42i,7n,51p,8822b,344s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmti12.pfb>
+Output written on relazione.pdf (3 pages, 130526 bytes).
 PDF statistics:
- 30 PDF objects out of 1000 (max. 8388607)
- 5 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 62 PDF objects out of 1000 (max. 8388607)
+ 12 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
