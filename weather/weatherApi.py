@@ -9,7 +9,7 @@ import json
 #709703159f539e81ecf8019a7d184627
 #72a133efd53a82f8b026b3730c921135
 
-passwordSQL = 'passMysql'
+passwordSQL = 'katenkyokotsu77?'
 
 date = datetime.datetime.strptime("09/20/17", "%m/%d/%y")
 day = date.day
@@ -31,6 +31,8 @@ while year <= 2017:
     for weather in data['hourly']['data']:
         try:
             w = Meteo(weather)
+            pprint(weather)
+            exit(3)
             w.store(cursor)
             cnx.commit()
         except Exception as e:

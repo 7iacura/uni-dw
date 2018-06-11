@@ -29,10 +29,9 @@ class Incidente:
         import datetime
         date = datetime.datetime.now()
         add_incidente = ("INSERT INTO incidente "
-                        "(unique_key,numero_morti,numero_feriti,pedoni_morti,pedoni_feriti,ciclisti_morti,ciclisti_feriti,conducenti_morti,conducenti_feriti,id_luogo,data_incidente,ora_incidente,created_at,updated_at) "
-                        "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
-        if idLuogo == 0:
-            idLuogo = None
+                        "(unique_key,numero_morti,numero_feriti,pedoni_morti,pedoni_feriti,ciclisti_morti,ciclisti_feriti,conducenti_morti,conducenti_feriti,id_luogo,data_incidente,ora_incidente,created_at) "
+                        "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
+
         data_incidente = (self.uniquekey,
                           self.personeMorte,
                           self.personeFerite,
@@ -45,7 +44,6 @@ class Incidente:
                           idLuogo,
                           self.date,
                           self.ore,
-                          date,
                           date)
 
         cursor.execute(add_incidente, data_incidente)

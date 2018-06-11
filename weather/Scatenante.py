@@ -8,9 +8,8 @@ class Scatenante:
         import mysql.connector
         import datetime
 
-        if self.descrizione == "":
-            return 0
-
+        import datetime
+        date = datetime.datetime.now()
         tomorrow = datetime.date
         time = datetime.time
 
@@ -21,7 +20,7 @@ class Scatenante:
             id = descrizione[0]
             exist = True
         if not exist:
-            add_scatenante = "INSERT INTO scatenante (descrizione)VALUES ('"+self.descrizione+"')"
+            add_scatenante = "INSERT INTO scatenante (descrizione,created_at)VALUES ('"+self.descrizione+"','"+str(date)+"')"
             cursor.execute(add_scatenante)
             id = cursor.lastrowid
 

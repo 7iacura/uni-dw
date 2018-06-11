@@ -24,8 +24,8 @@
  
 \section*{Introduzione}
 introduzione
-
-\section*{Analisi dei dati - Csv Incidenti}
+\newpage
+\section*{Analisi dei dati - Incidenti}
 
 \subsection*{Sorgente dati: Incidenti a New York}
 Il dataset contenente gli incidenti stradali avvenuti a New York nel periodo temporale da noi analizzato è stato ottenuto attraverso la piattaforma \emph{NYC Open Data} nella sezione \emph{Sicurezza pubblica}.
@@ -70,30 +70,134 @@ Ogni incidente può avere molteplici righe di dettaglio.
 \newline
 $luogo$ (\textbf{\underline{id}}, quartiere, zip, latitudine,longitudine)
 \newline
-La relazione luogo identifica
+La relazione luogo descrive la posizione in cui avviene l' incidente.
+Sebbene sia stata creata una chiave primaria intera incrementale (per facilitare il collegamento con la chiave esterna nella relazione $incidenti$) è stato applicato un vincolo di unicità sulla coppia $latitudine$,$longitudine$. E' possibile inoltre avere l'informazione del quartiere e dello zip (non sempre presenti)
 \newline
 \newline
 $strada$ (\textbf{\underline{id}}, strada)
 \newline
+Un elenco di tutte le possibili strade presente a $New$ $York$, ricopre il semplice ruolo di anagrafica.
+\newline
 \newline
 $link\_luogo\_strada$ (\textit{\textbf{\underline{id\_luogo}}},\textit{\textbf{\underline{id\_strada}}})
+\newline
+Questa relazione è il collegamento tra la posizione e la strada. Oltre ad essere chiavi esterne, la coppia di attributi che caratterizza la relazione funge a che da chiave univoca.
 \newline
 \newline
 \begin{center}
 
-\includegraphics[scale=0.6]{ER.png}
+\includegraphics[scale=0.6]{Schema-Incidenti.png}
+\end{center}
+\subsection*{Progettazione Concettuale}
+\begin{center}
+
+\includegraphics[scale=0.6]{ER-Incidenti.png}
+\end{center}
+\subsection*{Importazione dei dati}
+Per l' importazione dei dati su database è stato utilizzato $Python$.
+La funzionalità di importazione si può dividere in 3 macro step:
+\begin{itemize}
+\item $Modellizzazione$: per rendere più semplice la comprensione delle tabelle che si andranno a creare su $DB$, sono state create diverse classi in $python$ che sono strettamente legate ad esse. Vi sarà appunto la classe $Incidete$, $Luogo$ ecc (fatta eccezione per le classi di collegamento come $dettagli$ e $link_luogo_strada$)
+\item $Realizzazione$ $del$ $database$: creazione di un database $MySql$ chiamato $db_incidenti$.
+Definizione delle relazioni chiamate $incidente$, $scatenante$, $tipoVeicolo$,
+$dettagli$, $luogo$, $strada$ e $link_luogo_strada$ presenti nel database creato
+in precedenza, specificando gli attributi (nome e tipologia), le chiavi
+primarie, le chiavi esterne e la tipologia di motore $MySQL$ (quella di default: $InnoDB$)
+\item $Implementazione$ $metodo$ $store$: ogni classe creata implementa un proprio metodo $store$ che ne garantisce il salvataggio a $db$. Questo è stato fatto per rendere bene l' idea del collegamento $istanza$ - $riga$ $della$ $tabella$
+
+
+\end{itemize}
+\newpage
+\section*{Analisi dei dati - Meteo}
+
+\subsection*{Sorgente dati: API Meteo a New York}
+I dato meteo sono stati reperiti da \href{https://darksky.net}{https://darksky.net}.
+Questo sito mette a disposizione delle $API$ che consentono di ottenere svariate informazioni riguardanti il meteo nella zona indicata.
+la $url$ da chiamare per interrogare il servizio rest esposto è:
+\newline
+\begin{center}
+https://api.darksky.net/forecast/$token$/$lat$,$lon$,$datetime$
+\end{center}
+Dove:
+\begin{itemize}
+\item $token$ è l' identificativo utente per poter usare le $API$
+\item $lat$ e $lon$ sono le coordinate della posizione per la quale si vogliono avere
+ informazioni
+\item $datetime$ è la data richiesta, scritta in formato $Y$-$m$-$d$T$h$:$i$:$s$
+\end{itemize}
+$New$ $York$ si trova alle coordinate $40$ $-74$ (l' API riconosce la città dalla posizione datale).
+L' $API$ fornisce informazioni sul meteo per tutte le 24 ore successive alla data indicata, con cadenza oraria. E' bastato quindi inserire la mezzanotte di ogni giorno per avere informazioni su tutte le ore della giornata.
+\subsection*{Informazioni raccolte}
+Analizzando le informazioni sul meteo, è stato possibile ricavare la seguente informazione:
+
+\subsubsection*{Meteo}
+Questa entità è l' unica informazione ricavata. Essa contiene posizione, umidità, temperatura e molte altre informazioni riguardanti il meteo. Inoltre, per ogni orario, vi è una informazione riassuntiva sul meteo ($Rainy$, $Sunny$..)
+Nello specifico, abbiamo:
+\begin{itemize}
+\item $UNIX$ $timestamp$ della rilevazione meteo
+\item $temperatura$, $temperatura$ $percepita$ e $punto$ $di$ $rugiada$ in gradi Fahrenheit
+\item $umidita'$ (valore tra 0 ed 1) e $pressione$ (millibars)
+\item $visibilita'$ (miglia) e $copertura$ $nuvole$ (percentuale)
+\item $velocita'$ (miglia orarie) ed $inclinazione$ (in gradi, partendo da Nord in senso orario) del vento 
+\item $riassunto$ del meteo in quella data e quella ora
+
+\end{itemize}
+\subsection*{Schema logico relazionale}
+Essendo l' informazione fornita dalle $API$ decisamente ben delineata ed "atomica". E' stato possibile delineare immediatamente l' entità $weather$.
+\newline
+\newline
+
+$weather$ (\textbf{\underline{id}}, data,ora,apparentTemperature,cloudCover,dewPoint,humidity,precipIntensity,precipProbability,pressure,summary,temperature,
+visibility,windBearing,windSpeed,created\_at)
+\newline
+Un elenco di tutte le possibili strade presente a $New$ $York$, ricopre il semplice ruolo di anagrafica.
+
+\begin{center}
+\includegraphics[scale=0.6]{Schema-Meteo.png}
+\end{center}
+\subsection*{Progettazione Concettuale}
+\begin{center}
+
+\includegraphics[scale=0.6]{ER-Meteo.png}
+\end{center}
+\subsection*{Importazione dei dati}
+Come per la precedente sorgente dati, anche per il meteo è stato utilizzato uno script $Python$ per popolare il database, nello specifico:
+\begin{itemize}
+\item $Modellizzazione$: mapping classe-tabella per ogni singola entità del database 
+\item $Realizzazione$ $del$ $database$: creazione di un database $MySql$ chiamato $meteo$.
+Definizione della relazione chiamata $weather$ specificando gli attributi (nome e tipologia), le chiavi
+primarie e la tipologia di motore $MySQL$ (quella di default: $InnoDB$)
+\item $Implementazione$ $metodo$ $store$
+\end{itemize}
+\newpage
+\section*{Schema Riconciliato - ODS}
+In questo capitolo verrà illustrata l' analisi delle 2 fonti per poter infine produrre lo schema riconciliato $ODS$.
+In primo luogo verrà illustrato lo schema concettuale per poi ricavare lo schema logico-relazionale. Infine, verranno illustrate le metodologie di $ETL$ ($Extract$, $Transform$, $Load$) per l'importazione dei dati dalle 2 sorgenti all' interno dell $ODS$.
+\subsection*{Progettazione Concettuale}
+A partire dagli schemi concettuali delle 2 sorgenti, è possibile ricreare lo schema concettuale riconciliato.
+In questo caso, il processo è di facile soluzione in quanto si sta trattando di sorgenti dati totalmente diverse tra loro e gli schemi delle sorgenti non si sovrappongono in alcun modo.
+Per poter effettuare questa interazione, è stato deciso di effettuare un collegamento tra l' entità $Incidente$ e l' entità $Meteo$. Questa relazione è una relazione $uno$ $a$ $molti$ (un incidente ha una sola rilevazione meteo, mentre possono esistere più incidenti per la stessa rilevazione meteo) e vede un collegamento tra la coppia di attributi ($weather$.$data$,$weather$.$ora$) e la coppia ($incidente$.$data_incidente$,$incidente$.$ora_incidente$)
+\begin{center}
+\includegraphics[scale=0.6]{ER-ODS.png}
+\end{center}
+\subsection*{Schema Logico - Relazionale}
+Lo schema logico-relazionale dell' ODS è stato realizzato a partire dallo schema concettuale dell' $ODS$ e non è altro che una semplice unione degli schemi precedentemente realizzati.
+\begin{center}
+\includegraphics[scale=0.6]{Schema-ODS.png}
+\end{center}
+
+Per creare l' $ODS$ è stato utilizzato uno script $Python$ e la sua relativa libreria $mySql$ per la gestione dei $DB$.
+\section*{Costruzione di un Data Warehouse}
+Questo capitolo tratterà l' effettiva creazione del $data$ $warehouse$. Verrà illustrata la fase concettuale e quella logica con relativa scelta sello schema da seguire. Infine, verrà presentato il processo di trasformazione dei dati dall' $ODS$ al $data$ $warehouse$.
+\section*{Progettazione Concettuale}
+\begin{center}
+\includegraphics[scale=1.0]{DFM.png}
 \end{center}
 
 
 
 
 
-
-
-
-
-
-
-
-
 \end{document}
+
+

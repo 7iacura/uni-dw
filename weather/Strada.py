@@ -7,8 +7,8 @@ class Strada:
     def store(self,cursor):
         import datetime
 
-        if self.strada == "":
-            return 0
+        import datetime
+        date = datetime.datetime.now()
 
 
 
@@ -19,7 +19,8 @@ class Strada:
             id = strada[0]
             exist = True
         if not exist:
-            add_strada = "INSERT INTO strada (strada)VALUES ('"+self.strada.strip().replace("'", "").replace('"', '')+"')"
+            add_strada = "INSERT INTO strada (strada,created_at)VALUES ('"+self.strada.strip().replace("'", "").replace('"', '')+"','"+str(date)+"')"
+
             cursor.execute(add_strada)
             id = cursor.lastrowid
 

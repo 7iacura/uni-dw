@@ -8,8 +8,8 @@ class Tipoveicolo:
         import mysql.connector
         import datetime
 
-        if self.tipologia == "":
-            return 0
+        import datetime
+        date = datetime.datetime.now()
 
         tomorrow = datetime.date
         time = datetime.time
@@ -22,7 +22,7 @@ class Tipoveicolo:
             exist = True
         if not exist:
 
-            add_tipoveicolo = "INSERT INTO tipoveicolo (tipologia)VALUES ('"+self.tipologia+"')"
+            add_tipoveicolo = "INSERT INTO tipoveicolo (tipologia,created_at)VALUES ('"+self.tipologia+"','"+str(date)+"')"
 
             cursor.execute(add_tipoveicolo)
             id = cursor.lastrowid

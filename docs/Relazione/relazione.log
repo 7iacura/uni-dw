@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.27)  20 MAY 2018 14:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.27)  9 JUN 2018 09:53
 entering extended mode
 **./relazione.tex
 (relazione.tex
@@ -1005,88 +1005,157 @@ LaTeX Info: Redefining \nameref on input line 22.
 
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 45--79
+Underfull \hbox (badness 10000) in paragraph at lines 45--87
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--79
+Underfull \hbox (badness 10000) in paragraph at lines 45--87
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--79
+Underfull \hbox (badness 10000) in paragraph at lines 45--87
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--79
+Underfull \hbox (badness 10000) in paragraph at lines 45--87
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--79
+Underfull \hbox (badness 10000) in paragraph at lines 45--87
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--79
+Underfull \hbox (badness 10000) in paragraph at lines 45--87
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--79
+Underfull \hbox (badness 10000) in paragraph at lines 45--87
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--79
+Underfull \hbox (badness 10000) in paragraph at lines 45--87
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--79
+Underfull \hbox (badness 10000) in paragraph at lines 45--87
 
  []
 
-[2] <ER.png, id=27, 763.85374pt x 598.235pt>
-File: ER.png Graphic file (type png)
- <use ER.png>
-Package pdftex.def Info: ER.png used on input line 81.
+[2] <Schema-Incidenti.png, id=24, 763.85374pt x 598.235pt>
+File: Schema-Incidenti.png Graphic file (type png)
+
+<use Schema-Incidenti.png>
+Package pdftex.def Info: Schema-Incidenti.png used on input line 89.
 (pdftex.def)             Requested size: 458.31578pt x 358.94377pt.
 
-Overfull \hbox (10.18483pt too wide) in paragraph at lines 81--82
+Overfull \hbox (10.18483pt too wide) in paragraph at lines 89--90
  [] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 96.
-[3 <./ER.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 96.
+[3] <ER-Incidenti.png, id=33, 613.29124pt x 593.21625pt>
+File: ER-Incidenti.png Graphic file (type png)
+
+<use ER-Incidenti.png>
+Package pdftex.def Info: ER-Incidenti.png used on input line 94.
+(pdftex.def)             Requested size: 367.97757pt x 355.9325pt.
+ [4 <./Schema-Incidenti.png>]
+Overfull \hbox (3.19156pt too wide) in paragraph at lines 101--106
+[]$\OML/cmm/m/it/12 Realizzazione$ $del$ $database$\OT1/cmr/m/n/12 : crea-zio-n
+e di un da-ta-ba-se $\OML/cmm/m/it/12 MySql$ \OT1/cmr/m/n/12 chia-ma-to $\OML/c
+mm/m/it/12 db[]ncidenti$\OT1/cmr/m/n/12 .
+ []
+
+[5 <./ER-Incidenti.png>] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 114--118
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--149
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--149
+
+ []
+
+[7]
+Overfull \hbox (269.91104pt too wide) in paragraph at lines 150--154
+[]$\OML/cmm/m/it/12 weather$ \OT1/cmr/m/n/12 ($[]$, da-ta,ora,apparentTemperatu
+re,cloudCover,dewPoint,humidity,precipIntensity,precipProbability,pressure,summ
+ary,temperature,
+ []
+
+<Schema-Meteo.png, id=63, 274.02374pt x 433.62pt>
+File: Schema-Meteo.png Graphic file (type png)
+ <use Schema-Meteo.png>
+Package pdftex.def Info: Schema-Meteo.png used on input line 156.
+(pdftex.def)             Requested size: 164.41551pt x 260.17401pt.
+
+<ER-Meteo.png, id=64, 121.45375pt x 61.22874pt>
+File: ER-Meteo.png Graphic file (type png)
+ <use ER-Meteo.png>
+Package pdftex.def Info: ER-Meteo.png used on input line 161.
+(pdftex.def)             Requested size: 72.87279pt x 36.73752pt.
+ [8 <./Schema-Meteo.png> <./ER-Meteo.png>] [9]
+<ER-ODS.png, id=77, 653.44125pt x 593.21625pt>
+File: ER-ODS.png Graphic file (type png)
+ <use ER-ODS.png>
+Package pdftex.def Info: ER-ODS.png used on input line 181.
+(pdftex.def)             Requested size: 392.06776pt x 355.9325pt.
+ [10 <./ER-ODS.png>] <Schema-ODS.png, id=85, 576.65437pt x 903.375pt>
+File: Schema-ODS.png Graphic file (type png)
+ <use Schema-ODS.png>
+Package pdftex.def Info: Schema-ODS.png used on input line 186.
+(pdftex.def)             Requested size: 345.99529pt x 542.02919pt.
+
+[11 <./Schema-ODS.png>] <DFM.png, id=92, 416.68172pt x 225.84375pt>
+File: DFM.png Graphic file (type png)
+
+<use DFM.png>
+Package pdftex.def Info: DFM.png used on input line 194.
+(pdftex.def)             Requested size: 416.68068pt x 225.84319pt.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 201.
+ [12 <./DFM.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 201.
  (relazione.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 96.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 96.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 201.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 201.
 Package rerunfilecheck Info: File `relazione.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 11639 strings out of 493323
- 175914 string characters out of 3139063
- 349723 words of memory out of 3000000
- 15025 multiletter control sequences out of 15000+200000
- 18029 words of font info for 60 fonts, out of 3000000 for 9000
+ 11695 strings out of 493323
+ 176719 string characters out of 3139063
+ 352723 words of memory out of 3000000
+ 15051 multiletter control sequences out of 15000+200000
+ 18366 words of font info for 61 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,7n,51p,8822b,344s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmti12.pfb>
-Output written on relazione.pdf (3 pages, 130526 bytes).
+ 42i,7n,51p,8822b,403s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolC.enc} <C:\User
+s\Danilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.p
+k><C:/Program Files/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol12.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol8.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+ssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.p
+fb>
+Output written on relazione.pdf (12 pages, 303557 bytes).
 PDF statistics:
- 62 PDF objects out of 1000 (max. 8388607)
- 12 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 145 PDF objects out of 1000 (max. 8388607)
+ 35 named destinations out of 1000 (max. 500000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

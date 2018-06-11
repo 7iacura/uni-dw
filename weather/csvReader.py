@@ -9,25 +9,29 @@ from Luogo import Luogo
 from Strada import Strada
 from pprint import pprint
 
-passwordSQL = 'passMysql'
+passwordSQL = 'katenkyokotsu77?'
 
 def linkLuogoStrada(cursor, idLuogo, idStrada):
+    import datetime
+    date = datetime.datetime.now()
     if idLuogo != 0 and idStrada != 0:
         try:
-            cursor.execute("INSERT INTO link_luogo_strada (idluogo,idstrada) values (" + str(idLuogo) + "," + str(idStrada) + ")")
+            cursor.execute("INSERT INTO link_luogo_strada (idluogo,idstrada,created_at) values (" + str(idLuogo) + "," + str(idStrada) + ",'"+str(date)+"')")
         except Exception as t:
             print(t)
 
 def link(cursor,idIncidente,idVeicolo,idScatenante):
+    import datetime
+    date = datetime.datetime.now()
     if idVeicolo != 0 or idScatenante != 0:
-        cursor.execute("INSERT INTO link (id_incidente,id_scatenante,id_tipoveicolo) values (" + str(idIncidente) + "," + str(idScatenante) + ","+str(idVeicolo)+")")
+        cursor.execute("INSERT INTO link (id_incidente,id_scatenante,id_tipoveicolo,created_at) values (" + str(idIncidente) + "," + str(idScatenante) + ","+str(idVeicolo)+",'"+str(date)+"')")
 
 with open('NYPD_Motor_Vehicle_Collisions.csv', 'r') as csvfile:
     reader = csv.reader(csvfile, delimiter=',')
     header = True
     cnx = mysql.connector.connect(user='root', password=passwordSQL,
                                   host='localhost',
-                                  database='stepone')
+                                  database='incidenti')
     cursor = cnx.cursor()
     i = 0
     for row in reader:

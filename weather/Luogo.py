@@ -22,9 +22,9 @@ class Luogo:
 
         tomorrow = datetime.date
         time = datetime.time
-        if self.latitude == 0 and self.longitude == 0:
-            return 0
 
+        import datetime
+        date = datetime.datetime.now()
         exist_luogo = "SELECT * FROM luogo where latitudine = " +str(self.latitude) + " and longitudine = " +str(self.longitude)
         cursor.execute(exist_luogo)
         exist = False
@@ -35,8 +35,8 @@ class Luogo:
             exist = True
 
         if not exist:
-            add_scatenante = "INSERT INTO luogo (quartiere,zip,latitudine,longitudine)VALUES (%s,%s,%s,%s)"
-            data_scatenante = (self.borough,self.zip,self.latitude,self.longitude)
+            add_scatenante = "INSERT INTO luogo (quartiere,zip,latitudine,longitudine,created_at)VALUES (%s,%s,%s,%s,%s)"
+            data_scatenante = (self.borough,self.zip,self.latitude,self.longitude,date)
             cursor.execute(add_scatenante,data_scatenante)
             id = cursor.lastrowid
 
